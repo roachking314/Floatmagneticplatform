@@ -1,5 +1,4 @@
 #include <SoftwareSerial.h>
-SoftwareSerial mySerial(2, 3); // RX, TX (핀 넘버를 잘적어주세요)
 
 #define Xendstop 8
 #define Yendstop 9
@@ -44,7 +43,7 @@ void setup() {
   pinMode(Xendstop, INPUT_PULLUP);
   pinMode(Yendstop, INPUT_PULLUP);
   pinMode(Zendstop, INPUT_PULLUP);
-  mySerial.begin(9600);
+  Serial.begin(9600);
 
 
   if(digitalRead(Xendstop) == LOW){    // x 엔드스탑까지 초기화
